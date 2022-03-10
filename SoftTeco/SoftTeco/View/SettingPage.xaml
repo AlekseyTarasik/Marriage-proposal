@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<views:BasePage  
+    xmlns:views="clr-namespace:SoftTeco"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="SoftTeco.View.SettingPage"
+    Title="Настройки">
+    <StackLayout BackgroundColor="White">
+        <ScrollView>
+            <StackLayout>
+                <Grid Padding="20,10,10,0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="32"/>
+                        <RowDefinition Height="2"/>
+                        <RowDefinition Height="32"/>
+                        <RowDefinition Height="2"/>
+                        <RowDefinition Height="32"/>
+                        <RowDefinition Height="2"/>
+                        <RowDefinition Height="32"/>
+                        <RowDefinition Height="2"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Button x:Name="BtnFirst" Text="О приложении" HorizontalOptions="Start" BackgroundColor="White" FontSize="20" Command="{Binding BtnAboutProgClick}" Grid.Column="0" Grid.Row="0" Margin="-5"/>
+                    <Button x:Name="BtnSecond" Text="Информация о сотруднике" HorizontalOptions="Start" BackgroundColor="White" FontSize="20" Command="{Binding BtnAboutEmpClick}" Grid.Column="0" Grid.Row="2" Margin="-5"/>
+                    <Button x:Name="BtnThird" Text="Поддержка" HorizontalOptions="Start" BackgroundColor="White" FontSize="20" Command="{Binding BtnSuppClick}" Grid.Column="0" Grid.Row="4" Margin="-5"/>
+                    <Button x:Name="BtnFourth" Text="Поделиться приложением" HorizontalOptions="Start" BackgroundColor="White" FontSize="20" Command="{Binding RequestCommand}" CommandParameter="{Binding Source={RelativeSource Self}}" Grid.Column="0" Grid.Row="6" Margin="-5"/>
+
+                    <BoxView BackgroundColor="#879CAC" HeightRequest="1" HorizontalOptions="Fill" Margin="0" Grid.Column="0" Grid.Row="1"/>
+                    <BoxView BackgroundColor="#879CAC" HeightRequest="1" HorizontalOptions="Fill" Margin="0" Grid.Column="0" Grid.Row="3"/>
+                    <BoxView BackgroundColor="#879CAC" HeightRequest="1" HorizontalOptions="Fill" Margin="0" Grid.Column="0" Grid.Row="5"/>
+                    <BoxView BackgroundColor="#879CAC" HeightRequest="1" HorizontalOptions="Fill" Margin="0" Grid.Column="0" Grid.Row="7"/>
+
+                </Grid>
+            </StackLayout>
+        </ScrollView>
+    </StackLayout>
+</views:BasePage>

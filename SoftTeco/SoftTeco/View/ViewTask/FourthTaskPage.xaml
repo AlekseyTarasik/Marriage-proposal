@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<views:BasePage
+    xmlns:views="clr-namespace:SoftTeco"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="SoftTeco.View.ViewTask.FourthTaskPage"
+    Title="Четвёртое задание">
+    <StackLayout>
+        <ScrollView VerticalOptions="FillAndExpand" Padding="10,10,10,10" BackgroundColor="White">
+            <StackLayout>
+                <StackLayout x:Name="Task4_1" Padding="40,30" Spacing="16">
+                    <Label Text="Отлично!" FontSize="34" FontFamily="Comfortaa-Light" TextColor="Black" HorizontalTextAlignment="Center"/>
+                    <Label Text="Вы уже хорошо продвинулись, осталось совсем немножко до своего заветного приза!" FontSize="28" FontFamily="Comfortaa-Light" TextColor="Black" HorizontalTextAlignment="Center" LineHeight="1.2"/>
+                    <Label Text="Продолжим?" FontSize="30" FontFamily="Comfortaa-Light" TextColor="Black" HorizontalTextAlignment="Center"  Padding="40,40,40,40" LineHeight="1.2"/>
+                    <Button x:Name="BtnStart" Text="Продолжить" Clicked="Button_Clicked" FontFamily="Europe" CornerRadius="50" Padding="60,10,60,10" Margin="-3" HeightRequest="100" FontSize="28" TextColor="#507593" BackgroundColor="White" BorderColor="#A6B9C8" BorderWidth="1" IsEnabled="False"/>
+                    <Label x:Name="LblToday" FontSize="22" FontFamily="Comfortaa-Light" TextColor="Black" HorizontalTextAlignment="Center"  Padding="40,20,40,20" LineHeight="1.2"/>
+                </StackLayout>
+
+                <StackLayout x:Name="Task4_2" IsVisible="false" BackgroundColor="White">
+                    <Label Text="Решите ребус и как можно быстрее доберитесь туда, часики тикают..." FontSize="24" FontFamily="Comfortaa-Light" TextColor="Black" HorizontalTextAlignment="Center" LineHeight="1.2"/>
+                    <Image Source="/Resources/drawable/fifth3.png" HeightRequest="720"/>
+                    <Image x:Name="Img2" IsVisible="false"/>
+                    <StackLayout x:Name="Task4Help" IsVisible="false" HeightRequest="115">
+                        <BoxView Color="#507593" HeightRequest="4" HorizontalOptions="Fill"/>
+                        <Image Source="/Resources/drawable/grand.jpg" HeightRequest="113" />
+                    </StackLayout>
+                    <Label x:Name="Lbl4Help" FontSize="18" FontFamily="Comfortaa-Light" TextColor="Black" Padding="4,0,0,0" IsVisible="false"/>
+                    <Editor x:Name="Task4_answer" Placeholder="Введите ответ..." TextColor="Black" HeightRequest="50" FontSize="24" Margin="0,0,0,10"/>
+                    <Label x:Name="Lbl5Place" IsVisible="false" FontSize="18" FontFamily="Comfortaa-Light" TextColor="Black" Padding="4,10,0,0"/>
+                    <StackLayout Orientation="Horizontal" Spacing="8" BackgroundColor="White" HeightRequest="50">
+                        <Button x:Name="BtnTask4Check" Text="Проверить" Clicked="BtnCheck_Clicked" WidthRequest="125" FontSize="16" TextColor="#507593" BackgroundColor="White" FontFamily="Europe" CornerRadius="30" BorderColor="#A6B9C8" BorderWidth="1"/>
+                        <Button Text="Подсказка" Clicked="BtnHelp_Clicked" WidthRequest="125" FontSize="16" TextColor="#507593" BackgroundColor="White" FontFamily="Europe" CornerRadius="30" BorderColor="#A6B9C8" BorderWidth="1"/>
+                        <Button x:Name="BtnTask4Start" Text="Далее" Clicked="BtnStart_Clicked" WidthRequest="125" FontSize="16" TextColor="#507593" BackgroundColor="White" FontFamily="Europe" CornerRadius="30" BorderColor="#A6B9C8" BorderWidth="1" IsEnabled="False"/>
+                    </StackLayout>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </StackLayout>
+</views:BasePage>

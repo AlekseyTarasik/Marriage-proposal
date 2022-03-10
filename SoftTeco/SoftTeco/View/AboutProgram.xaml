@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<views:BasePage  
+    xmlns:views="clr-namespace:SoftTeco" 
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="SoftTeco.View.AboutProgram"
+    Title="О приложении">
+    <StackLayout Padding="10,10,0,0" BackgroundColor="White">
+
+        <AbsoluteLayout Padding="0,10,0,0" VerticalOptions="Center" HorizontalOptions="Center">
+            <Image Source="Resources/drawable/SoftTeco700.png" WidthRequest="100"/>
+            <Label Text="SoftTeco" TextColor="Black" FontSize="24" Padding="0,110,0,0"/>
+        </AbsoluteLayout>
+
+        <Label Text="Информация о приложении" TextColor="Black" FontSize="24" Padding="0,10,0,0"/>
+        <StackLayout Padding="10,0,0,0">
+            <Label x:Name="NameProgramm" Text="Name" TextColor="Black" FontSize="18"/>
+            <Label x:Name="NamePackProgramm" Text="Package Name" TextColor="Black" FontSize="18"/>
+        </StackLayout>
+            
+        <Label Text="Информация о версии" TextColor="Black" FontSize="24"/>
+        <StackLayout Padding="10,0,0,0">
+            <Label x:Name="BuildProgramm" Text="Build" TextColor="Black" FontSize="18"/>
+            <Label x:Name="VersionProgramm" Text="Version" TextColor="Black" FontSize="18"/>
+            <Label x:Name="colorapp" Text="Version1" TextColor="Black" FontSize="18"/>
+        </StackLayout>
+            
+        <Label Text="Официальные страницы: " TextColor="Black" FontSize="24" Padding="0,20,0,0"/>
+        <Grid Padding="15,10,15,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="32"/>
+                <RowDefinition Height="3"/>
+                <RowDefinition Height="32"/>
+                <RowDefinition Height="3"/>
+                <RowDefinition Height="32"/>
+                <RowDefinition Height="3"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Button x:Name="Btn_width1" Text="Instagram" BackgroundColor="White" FontSize="24" HorizontalOptions="Start" ImageSource="Resources/drawable/instagram1_32.png" Clicked="BtnOpenBrowser_Click" ClassId="https://www.instagram.com/softteco/" Grid.Column="0" Grid.Row="0" Margin="-5" Padding="0,0,205,0"/>
+            <Rectangle x:Name="Rect_width1" Grid.Column="0" Grid.Row="1" Fill="#879CAC"/>
+            <Button x:Name="Btn_width2" Text="Telegram" BackgroundColor="White" FontSize="24" HorizontalOptions="Start" ImageSource="Resources/drawable/telegram1_32.png" Clicked="BtnOpenBrowser_Click" ClassId="https://t.me/softteco_team" Grid.Column="0" Grid.Row="2" Margin="-5" Padding="0,0,211,0"/>
+            <Rectangle x:Name="Rect_width2" Grid.Column="0" Grid.Row="3" Fill="#879CAC" />
+            <Button x:Name="Btn_width3" Text="LinkedIn" BackgroundColor="White" FontSize="24" HorizontalOptions="Start" ImageSource="Resources/drawable/linkedin1_32.png" Clicked="BtnOpenBrowser_Click" ClassId="https://www.linkedin.com/company/softteco-team/" Grid.Column="0" Grid.Row="4" Margin="-5" Padding="0,0,225,0"/>
+            <Rectangle x:Name="Rect_width3" Grid.Column="0" Grid.Row="5" Fill="#879CAC" />
+        </Grid>
+    </StackLayout>
+</views:BasePage>

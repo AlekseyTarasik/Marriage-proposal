@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<views:BasePage
+    xmlns:views="clr-namespace:SoftTeco"
+    x:Class="SoftTeco.View.GalleryPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    x:Name="GalleryPag"
+    Title="Прекрасный миг 🤍">
+    <AbsoluteLayout>
+        <Label x:Name="LblToday" FontSize="22" FontFamily="Comfortaa-Light" TextColor="Black" HorizontalTextAlignment="Center" Padding="80,300,80,20" LineHeight="1.4" IsVisible="false"/>
+        <CarouselView x:Name="TheCarousel" AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All" ItemsSource="{Binding .}" PeekAreaInsets="0" IndicatorView="indicatorview" IsVisible="false">
+            <CarouselView.ItemTemplate>
+                <DataTemplate>
+                    <AbsoluteLayout>
+                        <Frame BorderColor="Gray" Margin="10" HasShadow="True" HeightRequest="700" CornerRadius="20" VerticalOptions="CenterAndExpand">
+                            <StackLayout Padding="0" Margin="-18">
+                                <Frame CornerRadius="20" Padding="0">
+                                    <Image Source="{Binding ImagePath}"/>
+                                </Frame>
+                                <Label Text="{Binding Title}" FontSize="24" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
+                            </StackLayout>
+                        </Frame>
+                    </AbsoluteLayout>
+                </DataTemplate>
+            </CarouselView.ItemTemplate>
+        </CarouselView>
+        <IndicatorView
+        x:Name="indicatorview"
+        AbsoluteLayout.LayoutBounds="0.5,0.99,400,15"
+        AbsoluteLayout.LayoutFlags="PositionProportional"
+        IndicatorColor="LightGray"
+        IndicatorSize="10"
+        SelectedIndicatorColor="#2196F3"
+        IsVisible="false"/>
+    </AbsoluteLayout>
+</views:BasePage> 

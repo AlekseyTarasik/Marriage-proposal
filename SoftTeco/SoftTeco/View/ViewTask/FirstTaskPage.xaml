@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<views:BasePage
+    xmlns:views="clr-namespace:SoftTeco"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="SoftTeco.View.FirstTaskPage"
+    Title="Первое задание">
+    <StackLayout>
+        <ScrollView VerticalOptions="FillAndExpand" Padding="10,10,10,10" BackgroundColor="White">
+            <StackLayout>
+                <StackLayout x:Name="Task1_1" Padding="40,30" Spacing="16">
+                    <Label Text="Здравствуйте!" FontSize="34" FontFamily="Comfortaa-Light" TextColor="Black" HorizontalTextAlignment="Center"/>
+                    <Label Text="Мы рады видеть вас в рядах участников нашего мини-марафона!" FontSize="28" FontFamily="Comfortaa-Light" TextColor="Black" HorizontalTextAlignment="Center" LineHeight="1.2"/>
+                    <Label Text="Приступим?" FontSize="30" FontFamily="Comfortaa-Light" TextColor="Black" HorizontalTextAlignment="Center"  Padding="40,40,40,40" LineHeight="1.2"/>
+                    <Button x:Name="BtnStart" Text="Стартуем!" Clicked="BtnStart_Clicked"  FontFamily="Europe" CornerRadius="50" Padding="60,10,60,10" Margin="-3" HeightRequest="100" FontSize="28" TextColor="#507593" BackgroundColor="White" BorderColor="#A6B9C8" BorderWidth="1" IsEnabled="False"/>
+                    <Label x:Name="LblToday" FontSize="22" FontFamily="Comfortaa-Light" TextColor="Black" HorizontalTextAlignment="Center"  Padding="40,20,40,20" LineHeight="1.2" IsVisible="false"/>
+                </StackLayout>
+
+                <StackLayout x:Name="Task1_2" IsVisible="false" BackgroundColor="White">
+                    <StackLayout Orientation="Horizontal" Spacing="60" HorizontalOptions="Center">
+                        <Switch x:Name="SW1" IsToggled="false" Toggled="OnToggled"/>
+                        <Switch x:Name="SW2" IsToggled="false" Toggled="OnToggled"/>
+                        <Switch x:Name="SW3" IsToggled="false" Toggled="OnToggled"/>
+                    </StackLayout>
+                    <StackLayout x:Name="Switch1On" IsVisible="False">
+                        <Label Text="Эта вещь — залог верности влюблённых. Вещь может быть большая и маленькая, разных модификаций, с именами или без. 
+                                Её вывешивают в специальных местах. Что это?" FontSize="18" FontFamily="Comfortaa-Light" TextColor="Black" HorizontalTextAlignment="Start" LineHeight="1.1"/>
+                        <Editor x:Name="EditFirst" Placeholder="Введите ответ..." FontSize="18" FontFamily="Comfortaa-Light" TextColor="Black"/>
+                        <Label Text="Какой город называют городом всех влюбленных?" FontSize="18" FontFamily="Comfortaa-Light" TextColor="Black" HorizontalTextAlignment="Start" LineHeight="1.1"/>
+                        <Editor x:Name="EditSecon" Placeholder="Введите ответ..." FontSize="18" FontFamily="Comfortaa-Light" TextColor="Black"/>
+                        <Label Text="Без чего нельзя приходить на свидания?" FontSize="18" FontFamily="Comfortaa-Light" TextColor="Black" HorizontalTextAlignment="Start" LineHeight="1.1"/>
+                        <Editor x:Name="EditThir" Placeholder="Введите ответ..." FontSize="18" FontFamily="Comfortaa-Light" TextColor="Black"/>
+                        <Label Text="Кто автор фразы: «Любви все возрасты покорны»?" FontSize="18" FontFamily="Comfortaa-Light" TextColor="Black" HorizontalTextAlignment="Start" LineHeight="1.1"/>
+                        <Editor x:Name="EditFour" Placeholder="Введите ответ..." FontSize="18" FontFamily="Comfortaa-Light" TextColor="Black"/>
+                        <Label x:Name="Check1On" IsVisible="false" FontSize="18" FontFamily="Comfortaa-Light" TextColor="Black" HorizontalTextAlignment="Start"/>
+                    </StackLayout>
+
+                    <StackLayout x:Name="Switch2On" IsVisible="False">
+                        <Label Text="Что является символом любви?" FontSize="18" FontFamily="Comfortaa-Light" TextColor="Black" HorizontalTextAlignment="Start" LineHeight="1.1"/>
+                        <Editor x:Name="Edit2Fi" Placeholder="Введите ответ..." FontSize="18" FontFamily="Comfortaa-Light" TextColor="Black"/>
+                        <Label Text="В каком заведении вы отмечали 14 февраля в прошлом году?" FontSize="18" FontFamily="Comfortaa-Light" TextColor="Black" HorizontalTextAlignment="Start" LineHeight="1.1"/>
+                        <Editor x:Name="Edit2Se" Placeholder="Введите ответ..." FontSize="18" FontFamily="Comfortaa-Light" TextColor="Black"/>
+                        <Label Text="На каком цветке гадают на любовь?" FontSize="18" FontFamily="Comfortaa-Light" TextColor="Black" HorizontalTextAlignment="Start" LineHeight="1.1"/>
+                        <Editor x:Name="Edit2Th" Placeholder="Введите ответ..." FontSize="18" FontFamily="Comfortaa-Light" TextColor="Black"/>
+                        <Label Text="В каком месте продаются лучшие цветы в городе?" FontSize="18" FontFamily="Comfortaa-Light" TextColor="Black" HorizontalTextAlignment="Start" LineHeight="1.1"/>
+                        <Editor x:Name="Edit2Fo" Placeholder="Введите ответ..." FontSize="18" FontFamily="Comfortaa-Light" TextColor="Black"/>
+                        <Label x:Name="Check2On" IsVisible="false" FontSize="18" FontFamily="Comfortaa-Light" TextColor="Black" HorizontalTextAlignment="Start"/>
+                    </StackLayout>
+
+                    <StackLayout x:Name="Switch3On" IsVisible="False">
+                        <Label Text="Помните ли вы дату вашей первой встречи?" FontSize="18" FontFamily="Comfortaa-Light" TextColor="Black" HorizontalTextAlignment="Start" LineHeight="1.1"/>
+                        <Label Text="Когда это было?" FontSize="18" FontFamily="Comfortaa-Light" TextColor="Black" HorizontalTextAlignment="Start" LineHeight="1.1"/>
+                        <DatePicker x:Name="Pick1" HorizontalOptions="Center" Format="dd MMMM yyyy" FontSize="18" FontFamily="Comfortaa-Light" TextColor="Black"/>
+                        <Label Text="А дату вашей первой совместной фотографии?" FontSize="18" FontFamily="Comfortaa-Light" TextColor="Black" HorizontalTextAlignment="Start" LineHeight="1.1"/>
+                        <DatePicker x:Name="Pick2" HorizontalOptions="Center" Format="dd MMMM yyyy" FontSize="18" FontFamily="Comfortaa-Light" TextColor="Black"/>
+                        <Label Text="А помните тот первый, самый робкий поцелуй?" FontSize="18" FontFamily="Comfortaa-Light" TextColor="Black" HorizontalTextAlignment="Start" LineHeight="1.1"/>
+                        <Label Text="Когда он был?" FontSize="18" FontFamily="Comfortaa-Light" TextColor="Black" HorizontalTextAlignment="Start" LineHeight="1.1"/>
+                        <DatePicker x:Name="Pick3" HorizontalOptions="Center" Format="dd MMMM yyyy" FontSize="18" FontFamily="Comfortaa-Light" TextColor="Black" />
+                        <Label x:Name="Check3On" IsVisible="false" FontSize="18" FontFamily="Comfortaa-Light" TextColor="Black" HorizontalTextAlignment="Start"/>
+                        <Label x:Name="Check4On" IsVisible="false" FontSize="18" FontFamily="Comfortaa-Light" TextColor="Black" HorizontalTextAlignment="Start" LineHeight="1.2" Padding="0,20,0,20"/>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal" Spacing="60" BackgroundColor="White" HeightRequest="50" HorizontalOptions="Center">
+                        <Button Text="Проверить" Clicked="BtnCheck_Clicked" WidthRequest="125" FontSize="16" TextColor="#507593" BackgroundColor="White" FontFamily="Europe" CornerRadius="30" BorderColor="#A6B9C8" BorderWidth="1"/>
+                        <Button x:Name="BtnEnter" Clicked="BtnEnter_Clicked" Text="Далее" WidthRequest="125" FontSize="16" TextColor="#507593" BackgroundColor="White" FontFamily="Europe" CornerRadius="30" BorderColor="#A6B9C8" BorderWidth="1"/>
+                    </StackLayout>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </StackLayout>
+</views:BasePage>

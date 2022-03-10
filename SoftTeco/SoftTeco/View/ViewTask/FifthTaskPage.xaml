@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<views:BasePage
+    xmlns:views="clr-namespace:SoftTeco"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="SoftTeco.View.ViewTask.FifthTaskPage"
+    Title="Пятое задание">
+    <StackLayout>
+        <ScrollView VerticalOptions="FillAndExpand" Padding="10,10,10,10" BackgroundColor="White">
+            <StackLayout>
+                <StackLayout x:Name="Task5_1" Padding="40,30" Spacing="16">
+                    <Label Text="Как вы?" FontSize="34" FontFamily="Comfortaa-Light" TextColor="Black" HorizontalTextAlignment="Center"/>
+                    <Label Text="Приз уже совсем близко, но для начала пройдите это задание!" FontSize="28" FontFamily="Comfortaa-Light" TextColor="Black" HorizontalTextAlignment="Center" LineHeight="1.2"/>
+                    <Label Text="Продолжим?" FontSize="30" FontFamily="Comfortaa-Light" TextColor="Black" HorizontalTextAlignment="Center"  Padding="40,40,40,40" LineHeight="1.2"/>
+                    <Button x:Name="BtnStart" Text="Продолжить" Clicked="Button_Clicked" FontFamily="Europe" CornerRadius="50" Padding="60,10,60,10" Margin="-3" HeightRequest="100" FontSize="28" TextColor="#507593" BackgroundColor="White" BorderColor="#A6B9C8" BorderWidth="1" IsEnabled="False"/>
+                    <Label x:Name="LblToday" FontSize="22" FontFamily="Comfortaa-Light" TextColor="Black" HorizontalTextAlignment="Center"  Padding="40,20,40,20" LineHeight="1.2"/>
+                </StackLayout>
+
+                <StackLayout x:Name="Task5_2" IsVisible="false" BackgroundColor="White">
+                    <Label Text="Приз вы увидите под следующей кнопкой в главном меню!" FontSize="28" FontFamily="Comfortaa-Light" TextColor="Black" HorizontalTextAlignment="Center" Padding="0,10,0,20"/>
+                    <Label Text="А пока что попробуйте отгадать заведение, которое заранее было забронировано специально для вас 🤍" FontSize="24" FontFamily="Comfortaa-Light" TextColor="Black" HorizontalTextAlignment="Center" Padding="20,0,20,0"/>
+                    <StackLayout Padding="0,30,0,0">
+                        <Button Clicked="BtnCheck_Clicked1" Text="Zalkind Kitchen" WidthRequest="180" FontSize="16" TextColor="#507593" BackgroundColor="White" FontFamily="Europe" CornerRadius="30" BorderColor="#A6B9C8" BorderWidth="1" Margin="114,0,114,0"/>
+                        <StackLayout Orientation="Horizontal" Spacing="40" HorizontalOptions="Center">
+                            <Button Text="Bloom Eatery" Clicked="BtnCheck_Clicked2" WidthRequest="150" FontSize="16" TextColor="#507593" BackgroundColor="White" FontFamily="Europe" CornerRadius="30" BorderColor="#A6B9C8" BorderWidth="1"/>
+                            <Button Text="Seafoodbar" Clicked="BtnCheck_Clicked3" WidthRequest="150" FontSize="16" TextColor="#507593" BackgroundColor="White" FontFamily="Europe" CornerRadius="30" BorderColor="#A6B9C8" BorderWidth="1"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal" Spacing="30" HorizontalOptions="Center">
+                            <Button Text="La Scala" Clicked="BtnTrue_Clicked" WidthRequest="140" FontSize="16" TextColor="#507593" BackgroundColor="White" FontFamily="Europe" CornerRadius="30" BorderColor="#A6B9C8" BorderWidth="1"/>
+                            <Button Text="?" Clicked="BtnHelp_Clicked" WidthRequest="60" FontSize="52" TextColor="#507593" BackgroundColor="White" FontFamily="Europe" Margin="-5,-25,-5,-25" CornerRadius="25"/>
+                            <Button Clicked="BtnCheck_Clicked4" Text="Ember" WidthRequest="140" FontSize="16" TextColor="#507593" BackgroundColor="White" FontFamily="Europe" CornerRadius="30" BorderColor="#A6B9C8" BorderWidth="1"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal" Spacing="40" HorizontalOptions="Center">
+                            <Button Clicked="BtnCheck_Clicked5" Text="Fabriq" WidthRequest="150" FontSize="16" TextColor="#507593" BackgroundColor="White" FontFamily="Europe" CornerRadius="30" BorderColor="#A6B9C8" BorderWidth="1"/>
+                            <Button Clicked="BtnCheck_Clicked6" Text="Grand Cafe" WidthRequest="150" FontSize="16" TextColor="#507593" BackgroundColor="White" FontFamily="Europe" CornerRadius="30" BorderColor="#A6B9C8" BorderWidth="1"/>
+                        </StackLayout>
+                        <Button Clicked="BtnCheck_Clicked7" Text="Bergamo" WidthRequest="150" FontSize="16" TextColor="#507593" BackgroundColor="White" FontFamily="Europe" CornerRadius="30" BorderColor="#A6B9C8" BorderWidth="1" Margin="114,0,114,0"/>
+                    </StackLayout>
+                    <Label x:Name="Lbl5Help" FontSize="20" FontFamily="Comfortaa-Light" TextColor="Black" HorizontalTextAlignment="Center" IsVisible="False"/>
+                    <Label x:Name="Lbl5Help1" FontSize="18" FontFamily="Comfortaa-Light" TextColor="Black" HorizontalTextAlignment="Center" IsVisible="False"/>
+                </StackLayout>
+                <Label x:Name="Lbl5TF" FontSize="24" FontFamily="Comfortaa-Light" TextColor="Black" HorizontalTextAlignment="Center" IsVisible="False" Padding="20,30,20,0" LineHeight="1.3"/>
+
+                <StackLayout x:Name="Task5_3" IsVisible="false" BackgroundColor="White">
+                    <Label Text="Предложение сделано?" FontSize="26" FontFamily="Comfortaa-Light" TextColor="Black" HorizontalTextAlignment="Center" Padding="0,20,0,20"/>
+                    <Label Text="Теперь можно и по чек-листу пройтись" FontSize="26" FontFamily="Comfortaa-Light" TextColor="Black" HorizontalTextAlignment="Center" Padding="0,20,0,20"/>
+                    <StackLayout Spacing="0">
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="Start">
+                            <CheckBox />
+                            <Label Text="Позвонить маме" FontSize="26" FontFamily="Comfortaa-Light" TextColor="Black" HorizontalTextAlignment="Center" Margin="0,-5,0,0"/>
+                        </StackLayout>
+                        <Label Text="c папой" FontSize="26" FontFamily="Comfortaa-Light" TextColor="Black" HorizontalTextAlignment="Center" Margin="280,-5,0,0"/>
+                    </StackLayout>
+                    <BoxView Color="#2196F3" HeightRequest="1" HorizontalOptions="Fill" Margin="40,0,0,0"/>
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="Start">
+                        <CheckBox />
+                        <Label Text="Позвонить бабушке" FontSize="26" FontFamily="Comfortaa-Light" TextColor="Black" HorizontalTextAlignment="Center" Margin="0,-5,0,0"/>
+                    </StackLayout>
+                    <BoxView Color="#2196F3" HeightRequest="1" HorizontalOptions="Fill" Margin="40,0,0,0"/>
+                    <StackLayout Spacing="0">
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="Start">
+                            <CheckBox />
+                            <Label Text="Позвонить тёте" FontSize="26" FontFamily="Comfortaa-Light" TextColor="Black" HorizontalTextAlignment="Center" Margin="0,-5,0,0"/>
+                        </StackLayout>
+                        <Label Text="Наташе" FontSize="26" FontFamily="Comfortaa-Light" TextColor="Black" HorizontalTextAlignment="Center" Margin="270,-5,0,0"/>
+                    </StackLayout>
+                    <BoxView Color="#2196F3" HeightRequest="1" HorizontalOptions="Fill" Margin="40,0,0,0"/>
+                    <StackLayout Spacing="0">
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="Start">
+                            <CheckBox />
+                            <Label Text="Запостить фото" FontSize="26" FontFamily="Comfortaa-Light" TextColor="Black" HorizontalTextAlignment="Center" Margin="0,-5,0,0"/>
+                        </StackLayout>
+                        <Label Text="в инстаграм" FontSize="26" FontFamily="Comfortaa-Light" TextColor="Black" HorizontalTextAlignment="Center" Margin="205,-5,0,0"/>
+                    </StackLayout>
+                    <BoxView Color="#2196F3" HeightRequest="1" HorizontalOptions="Fill" Margin="40,0,0,0"/>
+                    <StackLayout Spacing="0">
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="Start">
+                            <CheckBox />
+                            <Label Text="Отметить этот день" FontSize="26" FontFamily="Comfortaa-Light" TextColor="Black" HorizontalTextAlignment="Center" Margin="0,-5,0,0"/>
+                        </StackLayout>
+                        <Label Text="в календаре" FontSize="26" FontFamily="Comfortaa-Light" TextColor="Black" HorizontalTextAlignment="Center" Margin="215,-5,0,0"/>
+                    </StackLayout>
+                    <BoxView Color="#2196F3" HeightRequest="1" HorizontalOptions="Fill" Margin="40,0,0,0"/>
+                    <StackLayout Spacing="0">
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="Start">
+                            <CheckBox />
+                            <Label Text="Оценить " FontSize="26" FontFamily="Comfortaa-Light" TextColor="Black" HorizontalTextAlignment="Center" Margin="0,-5,0,0"/>
+                        </StackLayout>
+                        <Label Text="оригинальность" FontSize="26" FontFamily="Comfortaa-Light" TextColor="Black" HorizontalTextAlignment="Center" Margin="155,-5,0,0"/>
+                    </StackLayout>
+                    <Button x:Name="BtnEnter" Clicked="BtnEnter_Clicked" Text="Далее" WidthRequest="125" FontSize="16" TextColor="#507593" BackgroundColor="White" FontFamily="Europe" CornerRadius="30" BorderColor="#A6B9C8" BorderWidth="1" Margin="100,50,100,0"/>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </StackLayout>
+</views:BasePage>

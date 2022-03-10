@@ -1,0 +1,39 @@
+﻿<views:BasePage 
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:views="clr-namespace:SoftTeco"
+    xmlns:viewmodels="clr-namespace:SoftTeco.ViewModel"
+    x:Class="SoftTeco.View.AboutEmployee"
+    Title="Информация о сотруднике">
+    <StackLayout BackgroundColor="White">
+        <ScrollView>
+            <StackLayout Padding="12,12,12,12" Spacing="6">
+                <Label Text="Фамилия" />
+                <Entry Placeholder="Введите Фамилию..." Text="{Binding Surname}" />
+
+                <Label Text="Имя" />
+                <Entry x:Name="X1" Placeholder="Введите Имя..." Text="{Binding Firstname}" />
+
+                <Label Text="Отчество" />
+                <Entry x:Name="X2" Placeholder="Введите Отчество..." Text="{Binding Patronymic}" />
+
+                <Label Text="Гражданство" />
+                <Entry x:Name="X3" Placeholder="Введите гражданство..." Text="{Binding Citizenship}" />
+
+                <Label Text="Номер телефона" />
+                <Editor x:Name="X4" Placeholder="Введите номер телефона..." Text="{Binding Phonenumber}" />
+
+                <Label Text="О себе" />
+                <Editor x:Name="X5" Placeholder="Введите информацию о себе..." Text="{Binding Aboutyourself}" AutoSize="TextChanges" />
+
+                <StackLayout Padding="60,20,60,0">
+                    <Button Text="Сохранить" Command="{Binding SaveCommand}" IsEnabled="{Binding IsNotBusy}" FontSize="16" TextColor="#507593" BackgroundColor="White" FontFamily="Europe" CornerRadius="30" BorderColor="#A6B9C8" BorderWidth="1"/>
+                </StackLayout>
+
+                <Button Text="Загрузить" Command="{Binding LoadCommand}" IsVisible="False" IsEnabled="{Binding IsNotBusy}" />
+                <Button Text="Удалить" Command="{Binding RemoveCommand}" IsVisible="False" IsEnabled="{Binding IsNotBusy}" />
+                <Button Text="Удалить всё" Command="{Binding RemoveAllCommand}" IsVisible="False" IsEnabled="{Binding IsNotBusy}" Margin="0,10,0,0" />
+            </StackLayout>
+        </ScrollView>
+    </StackLayout>
+</views:BasePage>

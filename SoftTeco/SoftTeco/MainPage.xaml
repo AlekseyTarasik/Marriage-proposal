@@ -1,0 +1,55 @@
+﻿<views:BasePage xmlns="http://xamarin.com/schemas/2014/forms"
+                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                xmlns:views="clr-namespace:SoftTeco"
+                xmlns:viewmodels="clr-namespace:SoftTeco.ViewModel"
+                x:Class="SoftTeco.MainPage">
+    <NavigationPage.TitleView>
+        <Frame BackgroundColor="#2196F3" Padding="5" >
+            <AbsoluteLayout Padding="10,5,10,5" HorizontalOptions="Start">
+                <StackLayout Padding="0,0,0,0">
+                    <Label Text="SoftTeco" HorizontalTextAlignment="Start" TextColor="White" FontSize="24"/>
+                </StackLayout>
+                <StackLayout Padding="110,0,0,0">
+                    <Image Source="Resources/drawable/SoftTeco32White.png" HorizontalOptions="Start"/>
+                </StackLayout>
+                <StackLayout Padding="330,0,0,0" >
+                    <ImageButton CornerRadius="20" Source="Resources/drawable/ico_settings64.png" HorizontalOptions="Start" Command="{Binding BtnSettingClicked}" Padding="-5,-5,-5,-5" BorderWidth="0"/>
+                </StackLayout>
+            </AbsoluteLayout>
+        </Frame>
+    </NavigationPage.TitleView>
+    <views:BasePage.BindingContext>
+        <viewmodels:MainViewModel />
+    </views:BasePage.BindingContext>
+    <ScrollView>
+        <StackLayout BackgroundColor="White">
+            
+            <!--
+            <Label Text="Начал разработку отсюда" FontSize="Title" TextColor="Black" Padding="30,10,30,10"/>
+            <Label Text="С целью изучения технологии Xamarin Forms я начал разработку этого мобильного приложения" FontSize="16" TextColor="Black" Padding="30,0,30,0"/>
+            <Label FontSize="16" TextColor="Black" Padding="30,24,30,0">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="В этом приложении я решил реализовать одну интересную идею: "/>
+                        <Span Text="мне показалось очень интересным сделать мобильное приложение, в котором будет порядка 5 основных окон. На каждом из этих окон будет какой-то ребус, отгадав который необходимо приехать в определённую локацию и на ней появится на экране кнопка, которую можно будет нажать. Далее появится следующий ребус и дата его выполнения. Результатом этих ребусов должно быть прибытие меня и моей девушки в определённое место. И именно там я собираюсь сделать ей предложение." FontAttributes="Bold"/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Label Text="Как можно заметить по этому мобильному приложению, оно уже частично готово. В ближайшие несколько дней я планирую завершить написание этого приложения. На мой взгляд самым интересным решением было сделать ограничение по датам (т.е. один ребус в день) и привязать это всё к корпоративному празднованию дня всех влюблённых." FontSize="14" TextColor="Black" Padding="30,10,30,10"/>
+            -->
+            <StackLayout Padding="50,20,50,0">
+                <Label Text="Руководство компании поздравляет всех парней и девушек c наступающим днём всех влюблённых!" FontSize="22" FontFamily="VremenaMediumItalic" TextColor="#507593" HorizontalTextAlignment="Center" LineHeight="1.2"/>
+            </StackLayout>
+
+            <StackLayout HorizontalOptions="Fill" Padding="60,25,60,0" Spacing="10" >
+                <Button x:Name="FirstBtn" HeightRequest="60" Text="Первое задание" FontSize="24" TextColor="#507593" Command="{Binding BtnFirstClicked}" BackgroundColor="White" FontFamily="Europe" CornerRadius="30" BorderColor="#A6B9C8" BorderWidth="1"/>
+                <Button x:Name="SecondBtn" HeightRequest="60" Text="Второе задание" FontSize="24" TextColor="#507593" Command="{Binding BtnSecondClicked}" BackgroundColor="White" FontFamily="Europe" CornerRadius="30" BorderColor="#A6B9C8" BorderWidth="1"/>
+                <Button x:Name="ThirdtBtn" HeightRequest="60" Text="Третье задание"  FontSize="24" TextColor="#507593" Command="{Binding BtnThirdClicked}" BackgroundColor="White" FontFamily="Europe" CornerRadius="30" BorderColor="#A6B9C8" BorderWidth="1"/>
+                <Button x:Name="ForthBtn" HeightRequest="60" Text="Четвёртое задание" FontSize="24" TextColor="#507593" Command="{Binding BtnFourthClicked}" BackgroundColor="White" FontFamily="Europe" CornerRadius="30" BorderColor="#A6B9C8" BorderWidth="1"/>
+                <Button x:Name="FifthBtn" HeightRequest="60" Text="Пятое задание" FontSize="24" TextColor="#507593" Command="{Binding BtnFifthClicked}" BackgroundColor="White" FontFamily="Europe" CornerRadius="30" BorderColor="#A6B9C8" BorderWidth="1"/>
+                <Button x:Name="GalleryBtn" HeightRequest="70" Text="Дополнение" FontSize="24" TextColor="#507593" Command="{Binding BtnGalleryClicked}" BackgroundColor="White"  Padding="0,-15,0,0" FontFamily="Europe" CornerRadius="30" BorderColor="#A6B9C8" BorderWidth="1"/>
+            </StackLayout>
+            <Label x:Name="GalleryLbl" Text="для особо активных" HorizontalTextAlignment="Center" Margin="0,-30,0,0" FontSize="16" FontFamily="Europe" Opacity="0.4" TextColor="#507593"/>
+        </StackLayout>
+    </ScrollView>
+</views:BasePage>

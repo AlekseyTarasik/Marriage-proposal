@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<views:BasePage
+    xmlns:views="clr-namespace:SoftTeco"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="SoftTeco.View.ViewTask.SecondTaskPage"
+    Title="Второе задание">
+    <StackLayout>
+        <ScrollView VerticalOptions="FillAndExpand" Padding="10,10,10,10" BackgroundColor="White">
+            <StackLayout>
+                <StackLayout x:Name="Task2_1" Padding="20,30" Spacing="16">
+                    <Label Text="Вы молодцы!" FontSize="34" FontFamily="Comfortaa-Light" TextColor="Black" HorizontalTextAlignment="Center"/>
+                    <Label Text="В первом памятном месте уже побывали и точно смогли окунуться в ностальгию" FontSize="22" FontFamily="Comfortaa-Light" TextColor="Black" HorizontalTextAlignment="Center" LineHeight="1.2"/>
+                    <Label Text="А для этого задания рекомендуем взять карамельный попкорн и как следует расслабиться!" FontSize="22" FontFamily="Comfortaa-Light" TextColor="Black" HorizontalTextAlignment="Center" LineHeight="1.2" Margin="0,20,0,0"/>
+                    <Label Text="Билеты появятся у вас на столе в обед, а время сеанса: 19.10" FontSize="16" FontFamily="Comfortaa-Light" TextColor="Black" HorizontalTextAlignment="Center" LineHeight="1.2" Margin="60,20,60,0"/>
+                    <Label Text="Готовы продолжить?" FontSize="30" FontFamily="Comfortaa-Light" TextColor="Black" HorizontalTextAlignment="Center"  Padding="40,20,40,20" LineHeight="1.2"/>
+                    <Button x:Name="BtnStart" Text="Продолжить" Clicked="BtnStart_Clicked" FontFamily="Europe" CornerRadius="50" Padding="60,10,60,0" Margin="-3" HeightRequest="100" FontSize="28" TextColor="#507593" BackgroundColor="White" BorderColor="#A6B9C8" BorderWidth="1" IsEnabled="False"/>
+                    <Label x:Name="LblToday" FontSize="22" FontFamily="Comfortaa-Light" TextColor="Black" HorizontalTextAlignment="Center"  Padding="70,10,70,0" LineHeight="1.2" IsVisible="false"/>
+                </StackLayout>
+
+                <StackLayout x:Name="Task2_2" IsVisible="false" BackgroundColor="White">
+                    <StackLayout x:Name="Task2_2_1" IsVisible="false" BackgroundColor="White">
+                        <Label Text="Сегодняшняя рубрика КИНО" FontSize="26" FontFamily="Comfortaa-Light" TextColor="Black" HorizontalTextAlignment="Center" LineHeight="1.4" Padding="40,20,40,20"/>
+                        <Label Text="В каком веке происходят события в фильме 'Король Генрих V'?" FontSize="20" FontFamily="Comfortaa-Light" TextColor="Black" HorizontalTextAlignment="Start" LineHeight="1.1"/>
+                        <StackLayout Orientation="Horizontal">
+                            <RadioButton Padding="0,0,-5,0"/>
+                            <Label Text="14" FontSize="18" FontFamily="Comfortaa-Light" TextColor="Black" VerticalOptions="Center" LineHeight="1.1" Padding="0,0,20,0"/>
+                            <RadioButton x:Name="RadBtn1_1" Padding="0,0,-5,0"/>
+                            <Label Text="15" FontSize="18" FontFamily="Comfortaa-Light" TextColor="Black" VerticalOptions="Center" LineHeight="1.1" Padding="0,0,20,0"/>
+                            <RadioButton Padding="0,0,-5,0"/>
+                            <Label Text="16" FontSize="18" FontFamily="Comfortaa-Light" TextColor="Black" VerticalOptions="Center" LineHeight="1.1" Padding="0,0,20,0"/>
+                            <RadioButton Padding="0,0,-5,0"/>
+                            <Label Text="17" FontSize="18" FontFamily="Comfortaa-Light" TextColor="Black" VerticalOptions="Center" LineHeight="1.1" Padding="0,0,20,0"/>
+                            <RadioButton Padding="0,0,-5,0"/>
+                            <Label Text="18" FontSize="18" FontFamily="Comfortaa-Light" TextColor="Black" VerticalOptions="Center" LineHeight="1.1" Padding="0,0,20,0"/>
+                        </StackLayout>
+                        <Label Text="Все знают королеву Елизавету II, а в каких годах жила королева Елизавета I?" FontSize="20" FontFamily="Comfortaa-Light" TextColor="Black" HorizontalTextAlignment="Start" LineHeight="1.1"/>
+                        <StackLayout>
+                            <RadioButton x:Name="RadBtn2_1" Padding="0,0,-5,0" Content="1533-1603" FontSize="18" FontFamily="Comfortaa-Light" TextColor="Black"/>
+                            <RadioButton Padding="0,0,-5,0" Content="1429-1498" FontSize="18" FontFamily="Comfortaa-Light" TextColor="Black"/>
+                            <RadioButton Padding="0,0,-5,0" Content="1489-1558" FontSize="18" FontFamily="Comfortaa-Light" TextColor="Black"/>
+                            <RadioButton Padding="0,0,-5,0" Content="1468-1537" FontSize="18" FontFamily="Comfortaa-Light" TextColor="Black"/>
+                            <RadioButton Padding="0,0,-5,0" Content="1547-1616" FontSize="18" FontFamily="Comfortaa-Light" TextColor="Black"/>
+                        </StackLayout>
+                        <Label Text="А как же звали сестру королевы Елизаветы 2?" FontSize="20" FontFamily="Comfortaa-Light" TextColor="Black" HorizontalTextAlignment="Start" LineHeight="1.1"/>
+                        <Editor x:Name="Edit2_1" Placeholder="Введите имя..."/>
+                        <Label Text="В честь какой елизаветы снят фильм 'Елизавета (1998)'?" FontSize="20" FontFamily="Comfortaa-Light" TextColor="Black" HorizontalTextAlignment="Start" LineHeight="1.1"/>
+                        <StackLayout>
+                            <RadioButton x:Name="RadBtn3_1" Padding="0,0,-5,0" Content="Елизаветы I" FontSize="18" FontFamily="Comfortaa-Light" TextColor="Black"/>
+                            <RadioButton Padding="0,0,-5,0" Content="Елизаветы II" FontSize="18" FontFamily="Comfortaa-Light" TextColor="Black"/>
+                        </StackLayout>
+                        <Label x:Name="Check1On" IsVisible="false" FontSize="18" FontFamily="Comfortaa-Light" TextColor="Black" HorizontalTextAlignment="Start"/>
+                    </StackLayout>
+                    <StackLayout x:Name="Task2_2_2" IsVisible="false" BackgroundColor="White">
+                        <Label Text="Правда или нет..." FontSize="26" FontFamily="Comfortaa-Light" TextColor="Black" HorizontalTextAlignment="Center" LineHeight="1.1" Padding="40,20,40,20"/>
+                        <Label Text="На юге Англии есть чемпионат по поеданию крапивы?" FontSize="20" FontFamily="Comfortaa-Light" TextColor="Black" HorizontalTextAlignment="Start" LineHeight="1.1"/>
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="5" Padding="0,5,0,5">
+                            <RadioButton x:Name="RadBtn4_1" Padding="0,0,-5,0"/>
+                            <Label Text="Да" FontSize="18" FontFamily="Comfortaa-Light" TextColor="Black" VerticalOptions="Center" Padding="0,0,80,0"/>
+                            <RadioButton Padding="0,0,-5,0"/>
+                            <Label Text="Нет" FontSize="18" FontFamily="Comfortaa-Light" TextColor="Black" VerticalOptions="Center"/>
+                        </StackLayout>
+                        <Label Text="В Англии распространена практика публичного взвешивания мэров?" FontSize="20" FontFamily="Comfortaa-Light" TextColor="Black" HorizontalTextAlignment="Start" LineHeight="1.1"/>
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="5" Padding="0,5,0,5">
+                            <RadioButton Padding="0,0,-5,0"/>
+                            <Label Text="Да" FontSize="18" FontFamily="Comfortaa-Light" TextColor="Black" VerticalOptions="Center" Padding="0,0,80,0"/>
+                            <RadioButton x:Name="RadBtn5_1" Padding="0,0,-5,0"/>
+                            <Label Text="Нет" FontSize="18" FontFamily="Comfortaa-Light" TextColor="Black" VerticalOptions="Center"/>
+                        </StackLayout>
+                        <Label Text="Англичане практически не употребляют алкоголь?" FontSize="20" FontFamily="Comfortaa-Light" TextColor="Black" HorizontalTextAlignment="Start" LineHeight="1.1"/>
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="5" Padding="0,5,0,5">
+                            <RadioButton Padding="0,0,-5,0"/>
+                            <Label Text="Да" FontSize="18" FontFamily="Comfortaa-Light" TextColor="Black" VerticalOptions="Center" Padding="0,0,80,0"/>
+                            <RadioButton x:Name="RadBtn6_1" Padding="0,0,-5,0"/>
+                            <Label Text="Нет" FontSize="18" FontFamily="Comfortaa-Light" TextColor="Black" VerticalOptions="Center"/>
+                        </StackLayout>
+                        <Label Text="В Англии существуют соревнования по ловле червей?" FontSize="20" FontFamily="Comfortaa-Light" TextColor="Black" HorizontalTextAlignment="Start" LineHeight="1.1"/>
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="5" Padding="0,5,0,5">
+                            <RadioButton x:Name="RadBtn7_1" Padding="0,0,-5,0"/>
+                            <Label Text="Да" FontSize="18" FontFamily="Comfortaa-Light" TextColor="Black" VerticalOptions="Center" Padding="0,0,80,0"/>
+                            <RadioButton Padding="0,0,-5,0"/>
+                            <Label Text="Нет" FontSize="18" FontFamily="Comfortaa-Light" TextColor="Black" VerticalOptions="Center"/>
+                        </StackLayout>
+                        <Label Text="Создателями Всемирной паутины считаются Англичане?" FontSize="20" FontFamily="Comfortaa-Light" TextColor="Black" HorizontalTextAlignment="Start" LineHeight="1.1"/>
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="5" Padding="0,5,0,5">
+                            <RadioButton x:Name="RadBtn8_1" Padding="0,0,-5,0"/>
+                            <Label Text="Да" FontSize="18" FontFamily="Comfortaa-Light" TextColor="Black" VerticalOptions="Center" Padding="0,0,80,0"/>
+                            <RadioButton Padding="0,0,-5,0"/>
+                            <Label Text="Нет" FontSize="18" FontFamily="Comfortaa-Light" TextColor="Black" VerticalOptions="Center"/>
+                        </StackLayout>
+                        <Label Text="Национальная Английская кухня известна своей изысканностью?" FontSize="20" FontFamily="Comfortaa-Light" TextColor="Black" HorizontalTextAlignment="Start" LineHeight="1.1"/>
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="5" Padding="0,5,0,5">
+                            <RadioButton Padding="0,0,-5,0"/>
+                            <Label Text="Да" FontSize="18" FontFamily="Comfortaa-Light" TextColor="Black" VerticalOptions="Center" Padding="0,0,80,0"/>
+                            <RadioButton x:Name="RadBtn9_1" Padding="0,0,-5,0"/>
+                            <Label Text="Нет" FontSize="18" FontFamily="Comfortaa-Light" TextColor="Black" VerticalOptions="Center"/>
+                        </StackLayout>
+                        <Label Text="И, наконец, финальный вопрос:" FontSize="20" FontFamily="Comfortaa-Light" TextColor="Black" HorizontalTextAlignment="Start" LineHeight="1.1" Padding="0,20,20,0"/>
+                        <Label Text="В фильме, на который вы пойдёте, снимался актёр 'Марк Уолберг', какой ещё фильм вы знаете с этим актёром?" FontSize="20" FontFamily="Comfortaa-Light" TextColor="Black" HorizontalTextAlignment="Start" LineHeight="1.1"/>
+                        <StackLayout>
+                            <RadioButton Padding="0,0,-5,0" Content="Конец" FontSize="18" FontFamily="Comfortaa-Light" TextColor="Black"/>
+                            <RadioButton Padding="0,0,-5,0" Content="Два короля" FontSize="18" FontFamily="Comfortaa-Light" TextColor="Black"/>
+                            <RadioButton x:Name="RadBtn10_1" Padding="0,0,-5,0" Content="Стрелок" FontSize="18" FontFamily="Comfortaa-Light" TextColor="Black"/>
+                            <RadioButton Padding="0,0,-5,0" Content="Революционер" FontSize="18" FontFamily="Comfortaa-Light" TextColor="Black"/>
+                            <RadioButton Padding="0,0,-5,0" Content="Вечность" FontSize="18" FontFamily="Comfortaa-Light" TextColor="Black"/>
+                        </StackLayout>
+                        <Label x:Name="Check2On" IsVisible="false" FontSize="18" FontFamily="Comfortaa-Light" TextColor="Black" HorizontalTextAlignment="Start"/>
+                    </StackLayout>
+                    <StackLayout x:Name="Task2_2_3" IsVisible="false" BackgroundColor="White">
+                        <Label Text="Приятного вам просмотра!" FontSize="34" FontFamily="Comfortaa-Light" TextColor="Black" HorizontalTextAlignment="Center" Padding="0,20,00,20"/>
+                        <Label Text="Жанр, к сожалению, не мелодрама, но зато фильм обязан быть хорошим" FontSize="22" FontFamily="Comfortaa-Light" TextColor="Black" HorizontalTextAlignment="Center" LineHeight="1.2" Padding="30,20,30,20"/>
+                        <Label Text="После сеанса обязательно не забудьте сделать фотографию на память!" FontSize="22" FontFamily="Comfortaa-Light" TextColor="Black" HorizontalTextAlignment="Center" LineHeight="1.2" Padding="0,20,0,20"/>
+                        <Label x:Name="Check3On" IsVisible="false" FontSize="18" FontFamily="Comfortaa-Light" TextColor="Black" HorizontalTextAlignment="Start"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal" Spacing="60" BackgroundColor="White" HeightRequest="50" HorizontalOptions="Center" Padding="0,20,0,20">
+                        <Button x:Name="BtnCheck"  Text="Проверить" Clicked="BtnCheck_Clicked" WidthRequest="125" FontSize="16" TextColor="#507593" BackgroundColor="White" FontFamily="Europe" CornerRadius="30" BorderColor="#A6B9C8" BorderWidth="1"/>
+                        <Button x:Name="BtnEnter" Text="Далее" Clicked="BtnEnter_Clicked" WidthRequest="125" FontSize="16" TextColor="#507593" BackgroundColor="White" FontFamily="Europe" CornerRadius="30" BorderColor="#A6B9C8" BorderWidth="1" IsVisible="False"/>
+                    </StackLayout>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </StackLayout>
+</views:BasePage>

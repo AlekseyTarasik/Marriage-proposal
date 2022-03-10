@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<views:BasePage
+    xmlns:views="clr-namespace:SoftTeco"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="SoftTeco.View.ViewTask.ThirdTaskPage"
+    Title="Третье задание">
+    <StackLayout>
+        <ScrollView VerticalOptions="FillAndExpand" Padding="10,10,10,10" BackgroundColor="White">
+            <StackLayout>
+                <StackLayout x:Name="Task3_1" Padding="40,30" Spacing="16">
+                    <Label Text="Вы молодцы!" FontSize="34" FontFamily="Comfortaa-Light" TextColor="Black" HorizontalTextAlignment="Center"/>
+                    <Label Text="Две локации уже посещено, а дальше будет только интереснее!" FontSize="28" FontFamily="Comfortaa-Light" TextColor="Black" HorizontalTextAlignment="Center" LineHeight="1.2"/>
+                    <Label Text="Надеемся, что вас хватит на все задания!" FontSize="30" FontFamily="Comfortaa-Light" TextColor="Black" HorizontalTextAlignment="Center"  Padding="40,20,40,20" LineHeight="1.2"/>
+                    <Button x:Name="BtnStart" Text="Продолжить" Clicked="BtnStart_Clicked" FontFamily="Europe" CornerRadius="50" Padding="60,10,60,10" Margin="-3" HeightRequest="100" FontSize="28" TextColor="#507593" BackgroundColor="White" BorderColor="#A6B9C8" BorderWidth="1" IsEnabled="False"/>
+                    <Label x:Name="LblToday" FontSize="22" FontFamily="Comfortaa-Light" TextColor="Black" HorizontalTextAlignment="Center"  Padding="40,20,40,20" LineHeight="1.2" IsVisible="false"/>
+                </StackLayout>
+
+                <StackLayout x:Name="Task3_2" IsVisible="false" BackgroundColor="White">
+                    <Label Text="Шоу интуиция начинается" FontSize="32" FontFamily="Comfortaa-Light" TextColor="Black" HorizontalTextAlignment="Center" LineHeight="1.1" Padding="0,0,0,20"/>
+
+                    <Label Text="Укажите количество административных единиц в Минске" FontSize="16" FontFamily="Comfortaa-Light" TextColor="Black" HorizontalTextAlignment="Start" LineHeight="1.1"/>
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Padding="0,10,0,10">
+                        <RadioButton Content="7" FontSize="18" FontFamily="Comfortaa-Light" TextColor="Black" Padding="15,0,15,0"/>
+                        <RadioButton Content="8" FontSize="18" FontFamily="Comfortaa-Light" TextColor="Black" Padding="15,0,15,0"/>
+                        <RadioButton x:Name="RadBtn3_1" Content="9" FontSize="18" FontFamily="Comfortaa-Light" TextColor="Black" Padding="15,0,15,0"/>
+                        <RadioButton Content="10" FontSize="18" FontFamily="Comfortaa-Light" TextColor="Black" Padding="15,0,15,0"/>
+                        <RadioButton Content="11" FontSize="18" FontFamily="Comfortaa-Light" TextColor="Black" Padding="15,0,15,0"/>
+                    </StackLayout>
+                    <Label x:Name="Lbl1_1" IsVisible="false"/>
+
+                    <Label Text="Укажите примерное количество населения в столице" FontSize="16" FontFamily="Comfortaa-Light" TextColor="Black" HorizontalTextAlignment="Start" LineHeight="1.1"/>
+                    <StackLayout Orientation="Horizontal" Padding="0,10,0,10">
+                        <Label Text="0" FontSize="16" FontFamily="Comfortaa-Light" TextColor="Black" HorizontalTextAlignment="Start" LineHeight="1.1" Padding="0,0,-15,0"/>
+                        <Slider Minimum="0" Maximum="2500000" ValueChanged="OnSliderValueChanged" WidthRequest="320"/>
+                        <Label x:Name="Slider2" FontSize="16" FontFamily="Comfortaa-Light" TextColor="Black" HorizontalTextAlignment="Start" LineHeight="1.1" Padding="-10,0,0,0"/>
+                    </StackLayout>
+                    <Label x:Name="Lbl1_2" IsVisible="false"/>
+
+                    <Label Text="Угадайте площадь самого большого ТРЦ Минска" FontSize="16" FontFamily="Comfortaa-Light" TextColor="Black" HorizontalTextAlignment="Start" LineHeight="1.1"/>
+                    <StackLayout Padding="0,10,0,10">
+                        <RadioButton Content="130000 м²" FontSize="18" FontFamily="Comfortaa-Light" TextColor="Black" Padding="15,0,15,0"/>
+                        <RadioButton Content="40000 м²" FontSize="18" FontFamily="Comfortaa-Light" TextColor="Black" Padding="15,0,15,0"/>
+                        <RadioButton Content="39100 м²" FontSize="18" FontFamily="Comfortaa-Light" TextColor="Black" Padding="15,0,15,0"/>
+                        <RadioButton Content="33300 м²" FontSize="18" FontFamily="Comfortaa-Light" TextColor="Black" Padding="15,0,15,0"/>
+                        <RadioButton Content="97000 м²" x:Name="RadBtn3_2" FontSize="18" FontFamily="Comfortaa-Light" TextColor="Black" Padding="15,0,15,0"/>
+                        <RadioButton Content="62500 м²" FontSize="18" FontFamily="Comfortaa-Light" TextColor="Black" Padding="15,0,15,0"/>
+                    </StackLayout>
+                    <Label x:Name="Lbl1_3" IsVisible="false"/>
+
+                    <Label Text="А на какой из улиц домов больше?" FontSize="16" FontFamily="Comfortaa-Light" TextColor="Black" HorizontalTextAlignment="Start" LineHeight="1.1"/>
+                    <StackLayout Padding="0,10,0,10">
+                        <RadioButton Content="ул. Маяковского" x:Name="RadBtn3_3" FontSize="18" FontFamily="Comfortaa-Light" TextColor="Black" Padding="15,0,15,0"/>
+                        <RadioButton Content="пр-т Победителей" FontSize="18" FontFamily="Comfortaa-Light" TextColor="Black" Padding="15,0,15,0"/>
+                        <RadioButton Content="пр-т Дзержинского" FontSize="18" FontFamily="Comfortaa-Light" TextColor="Black" Padding="15,0,15,0"/>
+                        <RadioButton Content="Логойский тракт" FontSize="18" FontFamily="Comfortaa-Light" TextColor="Black" Padding="15,0,15,0"/>
+                    </StackLayout>
+                    <Label x:Name="Lbl1_4" IsVisible="false"/>
+
+                    <Label Text="А на какой из улиц домов меньше?" FontSize="16" FontFamily="Comfortaa-Light" TextColor="Black" HorizontalTextAlignment="Start" LineHeight="1.1"/>
+                    <StackLayout Padding="0,10,0,10">
+                        <RadioButton Content="пр-т Партизанский" FontSize="18" FontFamily="Comfortaa-Light" TextColor="Black" Padding="15,0,15,0"/>
+                        <RadioButton Content="пр-т Независимости" FontSize="18" FontFamily="Comfortaa-Light" TextColor="Black" Padding="15,0,15,0"/>
+                        <RadioButton Content="ул. Притыцкого" x:Name="RadBtn3_4" FontSize="18" FontFamily="Comfortaa-Light" TextColor="Black" Padding="15,0,15,0"/>
+                    </StackLayout>
+                    <Label x:Name="Lbl1_5" IsVisible="false"/>
+
+                    <Label Text="Укажите сколько раз город полностью выгорал и отстраивался заново" FontSize="16" FontFamily="Comfortaa-Light" TextColor="Black" HorizontalTextAlignment="Start" LineHeight="1.1"/>
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Padding="0,10,0,10">
+                        <RadioButton Content="6" FontSize="18" FontFamily="Comfortaa-Light" TextColor="Black" Padding="15,0,15,0"/>
+                        <RadioButton Content="7" FontSize="18" FontFamily="Comfortaa-Light" TextColor="Black" Padding="15,0,15,0"/>
+                        <RadioButton Content="11" FontSize="18" FontFamily="Comfortaa-Light" TextColor="Black" Padding="15,0,15,0"/>
+                        <RadioButton Content="15" FontSize="18" FontFamily="Comfortaa-Light" TextColor="Black" Padding="15,0,15,0"/>
+                        <RadioButton x:Name="RadBtn3_5" Content="18" FontSize="18" FontFamily="Comfortaa-Light" TextColor="Black" Padding="15,0,15,0"/>
+                    </StackLayout>
+                    <Label x:Name="Lbl1_6" IsVisible="false"/>
+
+
+                    <Label Text="Какое место, на ваш взгляд, является наиболее кинематографичным для сцен, предшествующих долгому расставанию?" FontSize="16" FontFamily="Comfortaa-Light" TextColor="Black" HorizontalTextAlignment="Start" LineHeight="1.1"/>
+                    <Editor x:Name="Edit1_1" Placeholder="Введите ответ..."/>
+                    <Label x:Name="Lbl1_7" IsVisible="false"/>
+
+                    <Label Text="Количество доступных станций метро в Минске" FontSize="16" FontFamily="Comfortaa-Light" TextColor="Black" HorizontalTextAlignment="Start" LineHeight="1.1"/>
+                    <StackLayout Orientation="Horizontal" Padding="0,10,0,10">
+                        <RadioButton Content="35" FontSize="18" FontFamily="Comfortaa-Light" TextColor="Black"  Padding="10,0,10,0"/>
+                        <RadioButton x:Name="RadBtn3_6" Content="33" FontSize="18" FontFamily="Comfortaa-Light" TextColor="Black"  Padding="10,0,10,0"/>
+                        <RadioButton Content="22" FontSize="18" FontFamily="Comfortaa-Light" TextColor="Black"  Padding="10,0,10,0"/>
+                        <RadioButton Content="29" FontSize="18" FontFamily="Comfortaa-Light" TextColor="Black"  Padding="10,0,10,0"/>
+                        <RadioButton Content="27" FontSize="18" FontFamily="Comfortaa-Light" TextColor="Black"  Padding="10,0,10,0"/>
+                    </StackLayout>
+                    <Label x:Name="Lbl1_8" IsVisible="false"/>
+
+                    <Label Text="А какое количество путей на станции Минск-Пассажирский?" FontSize="16" FontFamily="Comfortaa-Light" TextColor="Black" HorizontalTextAlignment="Start" LineHeight="1.1"/>
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Padding="0,10,0,10">
+                        <RadioButton Content="12" FontSize="18" FontFamily="Comfortaa-Light" TextColor="Black"  Padding="13,0,13,0"/>
+                        <RadioButton Content="18" FontSize="18" FontFamily="Comfortaa-Light" TextColor="Black"  Padding="13,0,13,0"/>
+                        <RadioButton x:Name="RadBtn3_7" Content="16" FontSize="18" FontFamily="Comfortaa-Light" TextColor="Black"  Padding="13,0,13,0"/>
+                        <RadioButton Content="15" FontSize="18" FontFamily="Comfortaa-Light" TextColor="Black"  Padding="13,0,13,0"/>
+                        <RadioButton Content="19" FontSize="18" FontFamily="Comfortaa-Light" TextColor="Black"  Padding="13,0,13,0"/>
+                    </StackLayout>
+                    <Label x:Name="Lbl1_9" IsVisible="false"/>
+
+                    <Label Text="При упоминании вокзала и электрички какая песня вспоминается наиболее быстрее всего?" FontSize="16" FontFamily="Comfortaa-Light" TextColor="Black" HorizontalTextAlignment="Start" LineHeight="1.1"/>
+                    <Editor x:Name="Edit1_2" Placeholder="Введите ответ..."/>
+                    <Label x:Name="Lbl1_10" IsVisible="false"/>
+
+                    <Label Text="Какие ещё песни исполнял Эдуард Хиль?" FontSize="16" FontFamily="Comfortaa-Light" TextColor="Black" HorizontalTextAlignment="Start" LineHeight="1.1"/>
+                    <StackLayout Margin="0" Padding="0,0,0,10">
+                        <StackLayout Orientation="Horizontal">
+                            <CheckBox x:Name="Check1" Margin="0,-5"/>
+                            <Label Text="Чему учат в школе" FontSize="16" FontFamily="Comfortaa-Light" TextColor="Black" HeightRequest="30" VerticalOptions="End" Padding="0,2,0,0"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal">
+                            <CheckBox x:Name="Check2" Margin="0,-5"/>
+                            <Label Text="Потолок ледяной" FontSize="16" FontFamily="Comfortaa-Light" TextColor="Black" HeightRequest="30" VerticalOptions="End" Padding="0,2,0,0"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal">
+                            <CheckBox x:Name="Check3" Margin="0,-5"/>
+                            <Label Text="Калинка-малинка" FontSize="16" FontFamily="Comfortaa-Light" TextColor="Black" HeightRequest="30" VerticalOptions="End" Padding="0,2,0,0"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal">
+                            <CheckBox x:Name="Check4" Margin="0,-5"/>
+                            <Label Text="Всё мы делим пополам" FontSize="16" FontFamily="Comfortaa-Light" TextColor="Black" HeightRequest="30" VerticalOptions="End" Padding="0,2,0,0"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal">
+                            <CheckBox x:Name="Check5" Margin="0,-5"/>
+                            <Label Text="Трус не играет в хоккей" FontSize="16" FontFamily="Comfortaa-Light" TextColor="Black" HeightRequest="30" VerticalOptions="End" Padding="0,2,0,0"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal">
+                            <CheckBox x:Name="Check6" Margin="0,-5"/>
+                            <Label Text="Дважды два - четыре" FontSize="16" FontFamily="Comfortaa-Light" TextColor="Black" HeightRequest="30" VerticalOptions="End" Padding="0,2,0,0"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal">
+                            <CheckBox x:Name="Check7" Margin="0,-5"/>
+                            <Label Text="Последняя электричка" FontSize="16" FontFamily="Comfortaa-Light" TextColor="Black" HeightRequest="30" VerticalOptions="End" Padding="0,2,0,0"/>
+                        </StackLayout>
+                    </StackLayout>
+                    <Label x:Name="Lbl1_11" IsVisible="false"/>
+
+                    <StackLayout Orientation="Horizontal" Spacing="60" BackgroundColor="White" HeightRequest="50" HorizontalOptions="Center">
+                        <Button Text="Проверить" Clicked="BtnCheck_Clicked" WidthRequest="125" FontSize="16" TextColor="#507593" BackgroundColor="White" FontFamily="Europe" CornerRadius="30" BorderColor="#A6B9C8" BorderWidth="1"/>
+                        <Button Text="Далее" x:Name="BtnEnter" Clicked="BtnEnter_Clicked"  WidthRequest="125" FontSize="16" TextColor="#507593" BackgroundColor="White" FontFamily="Europe" CornerRadius="30" BorderColor="#A6B9C8" BorderWidth="1"/>
+                    </StackLayout>
+                </StackLayout>
+
+                <StackLayout x:Name="Task3_3" Padding="40,30" Spacing="16" IsVisible="false">
+                    <Label Text="Мы уверены, что для вас этот тест был абсолютно несложным!" FontSize="24" FontFamily="Comfortaa-Light" TextColor="Black" HorizontalTextAlignment="Center"  Padding="40,20,40,20" LineHeight="1.2"/>
+                    <Label Text="Вот и следующее задание" FontSize="22" FontFamily="Comfortaa-Light" TextColor="Black" HorizontalTextAlignment="Center" Padding="10,0,10,10"/>
+                    <Label Text="⨈" FontSize="32" FontFamily="Comfortaa-Light" TextColor="Black" HorizontalTextAlignment="Center" Margin="0,0,0,0"/>
+                    <Label Text="Посетите ЖД вокзал и платформу, с которой должен приехать поезд из Борисова" FontSize="22" FontFamily="Comfortaa-Light" TextColor="Black" HorizontalTextAlignment="Center" Padding="10,0,10,10"/>
+                    <Label Text="не забывайте делать совместные фотографии, они вам пригодятся" FontSize="18" FontFamily="Comfortaa-Light" TextColor="Black" HorizontalTextAlignment="Center" Padding="10,20,10,10"/>
+                    <Label x:Name="Check3On" IsVisible="false" FontSize="18" FontFamily="Comfortaa-Light" TextColor="Black" HorizontalTextAlignment="Start"/>
+                    <StackLayout Orientation="Horizontal" Spacing="60" BackgroundColor="White" HeightRequest="50" HorizontalOptions="Center">
+                        <Button Text="Далее" x:Name="BtnEnter1" Clicked="BtnEnter_Clicked"  WidthRequest="125" FontSize="16" TextColor="#507593" BackgroundColor="White" FontFamily="Europe" CornerRadius="30" BorderColor="#A6B9C8" BorderWidth="1"/>
+                    </StackLayout>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </StackLayout>
+</views:BasePage>

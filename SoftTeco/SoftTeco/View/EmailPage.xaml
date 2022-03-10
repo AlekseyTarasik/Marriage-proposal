@@ -1,0 +1,29 @@
+﻿<views:BasePage 
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:views="clr-namespace:SoftTeco"
+    xmlns:viewmodels="clr-namespace:SoftTeco.ViewModel"
+    x:Class="SoftTeco.View.EmailPage"
+    Title="Поддержка">
+    <StackLayout BackgroundColor="White">
+        <Label Text="Отправка сообщения техподдержке" FontAttributes="Bold" Margin="12" />
+
+        <ScrollView>
+            <StackLayout Padding="12,0,12,12" Spacing="6">
+                <Label Text="Получатель" FontAttributes="Bold" Margin="0,0,0,-6" FontSize="16" TextColor="Black"/>
+                <Entry Text="{Binding RecipientsTo}" />
+
+                <Label Text="Сообщение" FontAttributes="Bold" Margin="0,6,0,0" FontSize="16" TextColor="Black"/>
+                <Label Text="Заголовок:" />
+                <Entry Text="{Binding Subject}" />
+
+                <Label Text="Текст:" />
+                <Editor Text="{Binding Body}" Keyboard="Chat" AutoSize="TextChanges" />
+                <StackLayout Padding="60,20,60,0">
+                    <Button Text="Отправить сообщение" Command="{Binding SendEmailCommand}" IsEnabled="{Binding IsNotBusy}" FontSize="16" TextColor="#507593" BackgroundColor="White" FontFamily="Europe" CornerRadius="30" BorderColor="#A6B9C8" BorderWidth="1"/>
+                </StackLayout>
+
+            </StackLayout>
+        </ScrollView>
+    </StackLayout>
+</views:BasePage>
